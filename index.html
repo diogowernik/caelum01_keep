@@ -8,27 +8,33 @@
     	<link rel='stylesheet' href='css/style.css' type='text/css'>
     	<link rel='stylesheet' href='css/cabecalho.css' type='text/css'>
     	<link rel='stylesheet' href='css/opcoesDaPagina.css' type='text/css'>
-
+    	<link rel="stylesheet" href="css/cartao.css">
+        <link rel="stylesheet" href="css/opcoesDoCartao.css">
+        <link rel="stylesheet" href="css/novoCartao.css" type="text/css" />
 </head>
 <body>
 	<header class="cabecalho container">
 	<h1 class="cabecalho-logo">keep</h1>
 	<button id="mudalayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao">linhas</button>
 	</header>
+	<form class="container novoCartao">
+		<textarea name="novoCartao-conteudo" class="novoCartao-conteudo" placeholder="digite aqui"></textarea>
+		<input type="submit" class="novoCartao-salvar" value="Salvar"/>
+	</form>
  <section class="container mural">
- 	   <div class="cartao novo-cartao">
+ 	   <div class="cartao" id="cartao_0"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_0">Remover</button></div>
  	    <p class="cartao-conteudo">Inserir novo cartão</p>
  	</div>
- 	<div class="cartao">
+ 	<div class="cartao" id="cartao_1"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_1">Remover</button></div>
  	    <p class="cartao-conteudo">Eveniet aut dolores vel tempore velit excepturi deserunt magni laborum ipsa repellat quas perferendis omnis, dolorem unde reprehenderit aspernatur totam libero voluptatibus iure, consectetur saepe. Facilis modi quas iusto nemo.</p>
  	</div>
- 	<div class="cartao">
+ 	<div class="cartao" id="cartao_2"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_2">Remover</button></div>
  	    <p class="cartao-conteudo">Ipsam nam quos recusandae! Inventore magnam provident reprehenderit aperiam, deleniti quibusdam aut rem natus. Impedit labore culpa ratione ipsam nostrum laboriosam nihil, quam nam harum, corporis sunt numquam minima earum.</p>
  	</div>
- 	<div class="cartao">
+ 	<div class="cartao" id="cartao_3"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_3">Remover</button></div>
  	    <p class="cartao-conteudo">Unde cumque rem, ipsam facere velit esse, molestiae saepe dolorem repellat iure enim perspiciatis a accusamus eius natus reiciendis mollitia. Ipsam eius cum modi voluptates esse labore, magnam, adipisci nam.</p>
  	</div>
- 	<div class="cartao">
+ 	<div class="cartao" id="cartao_4"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_4">Remover</button></div>
  	    <p class="cartao-conteudo">Possimus quisquam enim doloribus optio hic illo officia, similique magnam voluptatum blanditiis adipisci tempora iure necessitatibus minus a. Rerum unde, quisquam id quia laborum cum molestias saepe hic optio. Illo.</p>
  	</div>
  </section>
