@@ -48,14 +48,36 @@ function removeCartao() {
 
 // submit form
 
-var formulario = document.querySelector ('.novoCartao');
-formulario.addEventListener("submit", salvaCartao);
+var formulario = $('.novoCartao');
+formulario.submit (salvaCartao);
 
 function salvaCartao (eventoClique){
+    eventoClique.preventDefault();
+    var campoConteudo = $('.novoCartao-conteudo', this);
+    var digitado = campoConteudo.val().trim();
     
-    eventoClique.preventDefaut();
     
+    if (digitado) {
+        
+    var numCartoes   = $('.cartao').length + 1;
+    var idNovoCartao = 'cartao_' + numCartoes;
+    var conteudoNovoCartao = $('<p>').addClass('cartao-conteudo').text(digitado);
+    var botaoRemove = $('<button>', {class:'opcoesDoCartao-opcao opcoesDoCartao-remove'}).text('Remover').click(removeCartao).attr('data-ref', '#'+idNovoCartao);
+    var opcoesDoCartao = $('<div>',{class:'opcoesDoCartao'}).append(botaoRemove)
+    var novoCartao = $('<div>', {class:"cartao"}).append(opcoesDoCartao).append(conteudoNovoCartao).attr('id', idNovoCartao );
+    
+// Como inserir primeiro? E se não tiver nenhum cartão? Email do professor para dúvidas e dar acesso ao meu projeto!
+
+    novoCartao.insertAfter($(mural).children().first());
+    
+    
+    
+    campoConteudo.val("");
+    campoConteudo.focus();
+    }
 }
+
+
 
 /*
 var cartoes = document.querySelectorAll('.cartao');

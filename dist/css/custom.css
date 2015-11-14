@@ -1,0 +1,15 @@
+button, input {
+    cursor:pointer;
+}
+
+
+.primeiro {
+    
+    background: #b1b351;
+    cursor:pointer;
+
+}
+.primeiro:hover{
+	background:#b1b351;
+	color:#fff;
+}

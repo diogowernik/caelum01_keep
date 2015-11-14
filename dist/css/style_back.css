@@ -1,0 +1,64 @@
+body{
+	background:#e8e8e8;
+	margin:0; 
+	padding:0;
+}
+.cabecalho {
+	background:#0082c7;
+	color:#fff;
+	
+}
+
+.cartao {
+	background:#ebef40;
+	margin:16px;
+	padding:16px;
+}
+/*
+.novo-cartao {
+ border: 2px solid #F2F2F2;
+ background:#F2F2F2;
+}
+.novo-cartao:hover{
+	background:#b1b351;
+	color:#fff;
+}
+*/
+.container {
+	padding: 0 10%;
+}
+
+
+#mudaLayout {
+	display:none;
+}
+@media(min-width:560px){
+#mudaLayout {
+	display:inline-block;
+}
+.cartao {
+    display: inline-block;
+    width:190px;
+    vertical-align:top;
+    box-sizing:border-box;
+    text-align:left;
+    flex-basis:190px;
+    flex-grow:1;
+}
+.mural{
+	text-align:center;
+	display:flex;
+	display:-mox-box-flex;
+	flex-wrap:wrap;
+	
+}
+
+.mural--linhas{
+	flex-direction:column;
+}
+.mural--linhas .cartao {
+width:auto;
+flex-basis:auto;
+}
+
+}

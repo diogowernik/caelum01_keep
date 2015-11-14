@@ -4,13 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title>keep</title>
-		<!--  Stylesheets -->
+<!-- build:css css/index.min.css -->
     	<link rel='stylesheet' href='css/style.css' type='text/css'>
     	<link rel='stylesheet' href='css/cabecalho.css' type='text/css'>
     	<link rel='stylesheet' href='css/opcoesDaPagina.css' type='text/css'>
     	<link rel="stylesheet" href="css/cartao.css">
         <link rel="stylesheet" href="css/opcoesDoCartao.css">
         <link rel="stylesheet" href="css/novoCartao.css" type="text/css" />
+<!-- endbuild -->
 </head>
 <body>
 	<header class="cabecalho container">
@@ -22,10 +23,16 @@
 		<input type="submit" class="novoCartao-salvar" value="Salvar"/>
 	</form>
  <section class="container mural">
- 	   <div class="cartao" id="cartao_0"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_0">Remover</button></div>
- 	    <p class="cartao-conteudo">Inserir novo cartão</p>
+ 	<div class="cartao" id="cartao_0">
+ 		<div class="opcoesDoCartao">
+ 			<button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_0">Remover</button>
+ 		</div>
+ 	    <p class="cartao-conteudo">Hoje Possimus quisquam enim doloribus optio hic illo officia, similique magnam voluptatum blanditiis adipisci tempora iure necessitatibus minus a. Rerum unde, quisquam id quia laborum cum molestias saepe hic optio. Illo.</p>
  	</div>
- 	<div class="cartao" id="cartao_1"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_1">Remover</button></div>
+ 	<div class="cartao" id="cartao_1">
+ 		<div class="opcoesDoCartao">
+ 			<button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_1">Remover</button>
+ 		</div>
  	    <p class="cartao-conteudo">Eveniet aut dolores vel tempore velit excepturi deserunt magni laborum ipsa repellat quas perferendis omnis, dolorem unde reprehenderit aspernatur totam libero voluptatibus iure, consectetur saepe. Facilis modi quas iusto nemo.</p>
  	</div>
  	<div class="cartao" id="cartao_2"><div class="opcoesDoCartao"><button class="opcoesDoCartao-opcao opcoesDoCartao-remove" data-ref ="#cartao_2">Remover</button></div>
@@ -38,6 +45,9 @@
  	    <p class="cartao-conteudo">Possimus quisquam enim doloribus optio hic illo officia, similique magnam voluptatum blanditiis adipisci tempora iure necessitatibus minus a. Rerum unde, quisquam id quia laborum cum molestias saepe hic optio. Illo.</p>
  	</div>
  </section>
+ <!-- build:js js/lib/jquery.min.js -->
+ <script type="text/javascript" src="js/jquery.js"></script>
+ <!-- endbuild -->
  <script type="text/javascript" src="js/principal.js"></script>
 </body>
 </html>

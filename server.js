@@ -9,7 +9,9 @@ var mimeTypes = {
 	"jpg" : "image/jpeg",
 	"png" : "image/png",
 	"js" : "text/javascript",
-	"css" : "text/css"
+	"css" : "text/css",
+	"svg" : "image/svg+xml"
+	
 };
 // Create Server
 http.createServer(function(req, res){
@@ -36,7 +38,7 @@ http.createServer(function(req, res){
 		fileStream.pipe(res);
 	} else if(stats.isDirectory()){
 		res.writeHead(302,{
-			'Location' : 'index.html'
+			'Location' : 'dist/index.html'
 		});
 		res.end();
 	} else {
