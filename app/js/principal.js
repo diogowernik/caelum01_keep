@@ -54,21 +54,25 @@ formulario.submit (salvaCartao);
 function salvaCartao (eventoClique){
     eventoClique.preventDefault();
     var campoConteudo = $('.novoCartao-conteudo', this);
-    var digitado = campoConteudo.val().trim();
+    var digitado = campoConteudo.val().trim().replace(/\n/g,"<br/>");
     
     
     if (digitado) {
         
     var numCartoes   = $('.cartao').length + 1;
     var idNovoCartao = 'cartao_' + numCartoes;
-    var conteudoNovoCartao = $('<p>').addClass('cartao-conteudo').text(digitado);
+    var conteudoNovoCartao = $('<p>').addClass('cartao-conteudo').html(digitado);
     var botaoRemove = $('<button>', {class:'opcoesDoCartao-opcao opcoesDoCartao-remove'}).text('Remover').click(removeCartao).attr('data-ref', '#'+idNovoCartao);
     var opcoesDoCartao = $('<div>',{class:'opcoesDoCartao'}).append(botaoRemove)
     var novoCartao = $('<div>', {class:"cartao"}).append(opcoesDoCartao).append(conteudoNovoCartao).attr('id', idNovoCartao );
     
 // Como inserir primeiro? E se não tiver nenhum cartão? Email do professor para dúvidas e dar acesso ao meu projeto!
 
-    novoCartao.insertAfter($(mural).children().first());
+
+
+novoCartao.prependTo(".mural");
+
+//    novoCartao.insertAfter($(mural).children().first());
     
     
     
@@ -76,6 +80,36 @@ function salvaCartao (eventoClique){
     campoConteudo.focus();
     }
 }
+
+// customização
+
+function decideTipoCartao (digitado) {
+    
+    var quebras = digitado.split("<br/>").length;
+    var letras = digitado.length;
+    var semQuebras = digitado.replace(/<br\/>/g," ")
+    var palavras = semQuebras.split(' ');
+    var maiorPalavra = ""
+    
+    for (var i=0; i < palavras.length ; i++){
+        
+        var palavra = palavras[i];
+        if (palavra.length > maiorPalavra.length) {
+            maiorPalavra=palavra;
+        }
+        
+    }
+    
+    
+
+    
+    
+    
+    
+}
+
+
+
 
 
 

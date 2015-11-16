@@ -68,7 +68,11 @@ function salvaCartao (eventoClique){
     
 // Como inserir primeiro? E se não tiver nenhum cartão? Email do professor para dúvidas e dar acesso ao meu projeto!
 
-    novoCartao.insertAfter($(mural).children().first());
+
+
+novoCartao.prependTo(".mural");
+
+//    novoCartao.insertAfter($(mural).children().first());
     
     
     
