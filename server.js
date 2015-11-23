@@ -38,7 +38,7 @@ http.createServer(function(req, res){
 		fileStream.pipe(res);
 	} else if(stats.isDirectory()){
 		res.writeHead(302,{
-			'Location' : 'dist/index.html'
+			'Location' : 'build/index.html'
 		});
 		res.end();
 	} else {

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p:hover {
+    outline: dashed thin #FFF;
+    cursor:pointer;
+    padding:5px;
+}
+
+body{
+    background-color: #e8e8e8;
+}
+
+.cabecalho {
+    background-color: #0082c7;
+}
+
+.cartao{
+    background-color: #ebef40;
+    margin: 16px;
+    padding: 16px;  
+    box-sizing: border-box;
+}
+
+.container{
+ padding: 0 10%;   
+}
+
+@media(min-width: 560px){
+    .cartao{
+        width: 190px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        flex-grow: 1;
+        flex-basis: 190px;
+        
+    }
+    .mural{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+    .mural--linhas{
+        flex-direction: column;
+        
+    }
+    
+    .mural--linhas .cartao{
+        flex-basis: auto;
+        width: auto;
+        
+    }
+    
+    #mudaLayout{
+        display: inline-block;
+    }
+    
+}
